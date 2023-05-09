@@ -43,7 +43,7 @@ func main() {
 			remainingTickets = remainingTickets - userTickets
 			bookings = append(bookings, firstName+" "+lastName)
 
-			fmt.Printf("Thank you %v %v for buying %v tickets. You will receive a confirmation email at %v.\nThere are %v tickets remaining.\n", firstName, lastName, userTickets, email, remainingTickets)
+			fmt.Printf("Thank you %v %v for buying %v tickets. You will receive a confirmation email at %v.\nThere are %v tickets remaining.\n\n", firstName, lastName, userTickets, email, remainingTickets)
 
 			firstNames := []string{}
 			for _, fullName := range bookings {
