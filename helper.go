@@ -4,9 +4,9 @@ import (
 	"strings"
 )
 
-func validateUserInput(firstName string, lastName string, email string, userTickets uint) (bool, bool, bool) {
-	isValidName := len(firstName) >= 2 && len(firstName) <= 10 && len(lastName) <= 15
-	isValidEmail := strings.Contains(email, "@")
-	isValidTicketNumber := userTickets > 0 && userTickets <= remainingTickets
+func validateUserInput(userInput userData) (bool, bool, bool) {
+	isValidName := len(userInput.firstName) >= 2 && len(userInput.firstName) <= 10 && len(userInput.lastName) <= 15
+	isValidEmail := strings.Contains(userInput.email, "@")
+	isValidTicketNumber := userInput.userTickets > 0 && userInput.userTickets <= remainingTickets
 	return isValidName, isValidEmail, isValidTicketNumber
 }
